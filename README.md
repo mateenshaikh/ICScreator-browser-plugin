@@ -9,8 +9,12 @@ Install the plugin for either Chrome or firefox.
 
 ## Chrome
 Download the above or use this direct download link for [chrome.zip](https://raw.githubusercontent.com/mateenshaikh/ICScreator-browser-plugin/main/chrome.zip) file. 
-Install the chrome plugin using the folder above. You can download the folder as a zip. You don't have to unzip it. Then load it as a temporary extension. If you don't know how, here's a video how to:
-
+Install the chrome plugin using the folder above. You can download the folder as a zip then unzip it and load it as a temporary extension. If you don't know how, here's a video how to: [https://media.tru.ca/media/install%20chrome%20temporarily/0_n5dac6o0](https://media.tru.ca/media/install%20chrome%20temporarily/0_n5dac6o0)
+  1. Go to chrome://extensions
+  2. Toggle Developer tools
+  3. Go to unpack extension
+  4. Go into the unzipped folder (it will appear blank when you go in)
+  5. There are no files to select, just click "Select Folder"
 
 
 ## Firefox
@@ -24,6 +28,9 @@ The extension was tentatively approved so you can download the XPI file above. T
   4. Click the extension button
   5. Enter the first/last day of classes according to https://www.tru.ca/current/enrolment-services/dates-deadlines.html
   6. Create the ICS file and download it somewhere.
+
+Video: [https://media.tru.ca/media/use+the+extension+to+download+the+ics+file/0_1y93jmji](https://media.tru.ca/media/use+the+extension+to+download+the+ics+file/0_1y93jmji)
+ 
 ## Load the calendar events
   7. In Outlook, go to your calendar
   8. Click Add Calendar
@@ -32,6 +39,9 @@ The extension was tentatively approved so you can download the XPI file above. T
   11. Select the calendar you want to enter it
       - This should be "Calendar" because that's what outlook looks at to schedule meetings and kind of the whole point of this
   12. Click Import.
+
+
+Video: [https://media.tru.ca/media/import+into+outlook/0_nnx7m3aw](https://media.tru.ca/media/import+into+outlook/0_nnx7m3aw)
 
 # Other notes
  - Manually remove holidays. To delete a single instance in outlook, click the event, then click delete, then click "This Event". If you use the keyboard delete button, it may delete the whole series, or all the events after the particular instance one you selected.
