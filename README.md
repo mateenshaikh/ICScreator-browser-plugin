@@ -11,10 +11,11 @@ Install the plugin for either chrome or firefox.
 Download the above or use this direct download link for [chrome.zip](https://raw.githubusercontent.com/mateenshaikh/ICScreator-browser-plugin/main/chrome.zip) file. 
 Install the chrome plugin using the folder above. You can download the folder as a zip then unzip it and load it as a temporary extension. If you don't know how, here's a video how to: [https://media.tru.ca/media/install%20chrome%20temporarily/0_n5dac6o0](https://media.tru.ca/media/install%20chrome%20temporarily/0_n5dac6o0)
   1. Go to chrome://extensions
-  2. Toggle Developer tools
-  3. Go to unpack extension
+  2. At the top right, Toggle on "Developer mode"
+  3. At the top left, click the "Unpack extension" button
   4. Go into the unzipped folder (it will appear blank when you go in)
-  5. There are no files to select, just click "Select Folder"
+  5. There are no files to select, just click "Select Folder" without selecting a file once you're in the folder.
+  6. Leave the browser open while you use the plugin. 
 
 
 ## Firefox
