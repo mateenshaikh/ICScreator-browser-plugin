@@ -8,6 +8,7 @@ The files were individually  built using refined prompts with Copilot GPT 4.1
 Install the plugin for either Chrome or firefox.
 
 ## Chrome
+Download the above [chrome.zip](https://github.com/mateenshaikh/ICScreator-browser-plugin/blob/main/chrome.zip?raw=true) file.
 Install the chrome plugin using the folder above. You can download the folder as a zip. You don't have to unzip it. Then load it as a temporary extension. If you don't know how, here's a video how to:
 
 
