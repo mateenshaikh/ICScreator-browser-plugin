@@ -12,6 +12,8 @@ function toICSDate(dateStr, timeStr) {
   return {dtStart, dtEnd};
 }
 
+//guess what?
+
 function extractEvents() {
   const events = [];
   document.querySelectorAll('.fc-content').forEach(eventElement => {
@@ -22,7 +24,7 @@ function extractEvents() {
     const titleText = titleElement.childNodes[1]?.textContent.trim() || ''
 
     // Extract location: e.g., "OM-2642"
-    const venueMatch = ariaText.match(/Venue([A-Z]+-\d+)/);
+    const venueMatch = ariaText.match(/Venue([A-Z0-9]+-[A-Z0-9]+)/);
     const locationText = venueMatch ? venueMatch[1].trim() : '';
 
     const dateMatch = ariaText.match(/Date(\d{2}\/\d{2}\/\d{4})/);
@@ -42,6 +44,8 @@ function extractEvents() {
   return events;
 }
 
+//chicken butt. haha made you look
+
 function buildICS(events, recurStart, recurEnd, timezone) {
   let ics = `BEGIN:VCALENDAR
 VERSION:2.0
@@ -49,25 +53,54 @@ PRODID:-//Schedule Exporter//EN
 CALSCALE:GREGORIAN
 X-WR-TIMEZONE:${timezone || 'America/Vancouver'}
 `;
+
+  // Parse semester start and end dates consistently using UTC to avoid timezone errors
+  const [endYear, endMonth, endDay] = recurEnd.split('-').map(Number);
+  const semesterEndDate = new Date(Date.UTC(endYear, endMonth - 1, endDay));
+  const [startYear, startMonth, startDay] = recurStart.split('-').map(Number);
+  const semesterStartDate = new Date(Date.UTC(startYear, startMonth - 1, startDay));
+
   events.forEach(ev => {
-    let rrule = '';
-    if (recurStart && recurEnd) {
-      // RRULE: FREQ=WEEKLY;UNTIL=YYYYMMDDT235959Z
-const untilDate = new Date(recurEnd);
-const startDate = new Date(ev.originalDate);
-if (untilDate > startDate) {
-  const until = recurEnd.replace(/-/g, '') + 'T235959Z';
-  rrule = `RRULE:FREQ=WEEKLY;UNTIL=${until}\n`;
-}
+    // Parse the date of the event scraped from the page using UTC
+    const [eventMonth, eventDay, eventYear] = ev.originalDate.split('/').map(Number);
+    const scrapedEventDate = new Date(Date.UTC(eventYear, eventMonth - 1, eventDay));
+    const scrapedDayOfWeek = scrapedEventDate.getUTCDay(); // 0=Sun, 6=Sat
+
+    // Find the date of the first actual occurrence in the semester
+    let firstOccurrenceDate = new Date(semesterStartDate.getTime());
+    // Move day-by-day from the semester start until the day of the week matches
+    while (firstOccurrenceDate.getUTCDay() !== scrapedDayOfWeek) {
+        firstOccurrenceDate.setUTCDate(firstOccurrenceDate.getUTCDate() + 1);
     }
+
+    // Format the correct first date into YYYYMMDD format
+    const y = firstOccurrenceDate.getUTCFullYear();
+    const m = pad(firstOccurrenceDate.getUTCMonth() + 1);
+    const d = pad(firstOccurrenceDate.getUTCDate());
+    const correctedDateString = `${y}${m}${d}`;
+
+    // Rebuild DTSTART and DTEND with the corrected date and original time
+    const timePartStart = ev.dtStart.split('T')[1];
+    const timePartEnd = ev.dtEnd.split('T')[1];
+    const newDtStart = `${correctedDateString}T${timePartStart}`;
+    const newDtEnd = `${correctedDateString}T${timePartEnd}`;
+
+    let rrule = '';
+    // Check if the event series should repeat at all
+    if (recurStart && recurEnd && semesterEndDate >= firstOccurrenceDate) {
+      const until = recurEnd.replace(/-/g, '') + 'T235959Z';
+      rrule = `RRULE:FREQ=WEEKLY;UNTIL=${until}\n`;
+    }
+
     ics += `BEGIN:VEVENT
 SUMMARY:${ev.title || 'Untitled Event'}
 LOCATION:${ev.location}
-DTSTART;TZID=${timezone || 'America/Vancouver'}:${ev.dtStart}
-DTEND;TZID=${timezone || 'America/Vancouver'}:${ev.dtEnd}
+DTSTART;TZID=${timezone || 'America/Vancouver'}:${newDtStart}
+DTEND;TZID=${timezone || 'America/Vancouver'}:${newDtEnd}
 ${rrule}END:VEVENT
 `;
   });
+
   ics += 'END:VCALENDAR';
   return ics;
 }
