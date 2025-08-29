@@ -1,4 +1,4 @@
-function pad(n) { return n < 10 ? '0' + n : n; }
+function pad(n) { return String(n).padStart(2, '0'); }
 
 function toICSDate(dateStr, timeStr) {
   // dateStr: MM/DD/YYYY, timeStr: HH:MM-HH:MM
@@ -19,8 +19,7 @@ function extractEvents() {
     const ariaText = titleElement.querySelector('.sr-only').textContent;
 
     // Extract title: e.g., "STAT3060 -S01"
-    const titleMatch = titleElement.innerHTML.match(/([A-Z]+\s*\d+\s*-\s*S\d+)/);
-    const titleText = titleMatch ? titleMatch[1].replace(/\s+/g, '') : '';
+    const titleText = titleElement.childNodes[1]?.textContent.trim() || ''
 
     // Extract location: e.g., "OM-2642"
     const venueMatch = ariaText.match(/Venue([A-Z]+-\d+)/);
@@ -54,11 +53,15 @@ X-WR-TIMEZONE:${timezone || 'America/Vancouver'}
     let rrule = '';
     if (recurStart && recurEnd) {
       // RRULE: FREQ=WEEKLY;UNTIL=YYYYMMDDT235959Z
-      const until = recurEnd.replace(/-/g, '') + 'T235959Z';
-      rrule = `RRULE:FREQ=WEEKLY;UNTIL=${until}\n`;
+const untilDate = new Date(recurEnd);
+const startDate = new Date(ev.originalDate);
+if (untilDate > startDate) {
+  const until = recurEnd.replace(/-/g, '') + 'T235959Z';
+  rrule = `RRULE:FREQ=WEEKLY;UNTIL=${until}\n`;
+}
     }
     ics += `BEGIN:VEVENT
-SUMMARY:${ev.title}
+SUMMARY:${ev.title || 'Untitled Event'}
 LOCATION:${ev.location}
 DTSTART;TZID=${timezone || 'America/Vancouver'}:${ev.dtStart}
 DTEND;TZID=${timezone || 'America/Vancouver'}:${ev.dtEnd}
