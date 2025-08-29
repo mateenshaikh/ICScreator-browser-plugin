@@ -2,10 +2,10 @@
 
 Note that  this is under a strong copyleft license.
 
-The files were individually  built using refined prompts with Copilot GPT 4.1
+The files were individually  built using refined prompts with Copilot GPT 4.1 and date issues with Gemini Flash 2.5 Pro.
 
 # Installation Instructions
-Install the plugin for either Chrome or firefox.
+Install the plugin for either chrome or firefox.
 
 ## Chrome
 Download the above or use this direct download link for [chrome.zip](https://raw.githubusercontent.com/mateenshaikh/ICScreator-browser-plugin/main/chrome.zip) file. 
