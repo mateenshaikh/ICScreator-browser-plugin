@@ -1,10 +1,8 @@
 # ICScreator-browser-plugin
 
-Note that  this is under a strong copyleft license.
+Note that this is under a strong copyleft license and should only be used for educational purposes. I haven't modified the default license yet but that's the gist of it.
 
 The files was coded using refined prompts with Copilot GPT 4.1 and date issues were fixed with Gemini Flash 2.5 Pro. This means you should expect the code to be of poor quality, uninutitive, and wasteful. But it's functional.
-
-This should only be used for educational purposes.
 
 # Installation Instructions
 
