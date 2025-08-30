@@ -6,7 +6,7 @@ The files was coded using refined prompts with Copilot GPT 4.1 and date issues w
 
 # Installation Instructions
 
-Instructions are given below. There are also video links if you can't read.
+You only need to install once unless you reset the browser. If you've already installed before, you skip straight to [Usage Instructions](#Usage-Instructions). After each block of instructions there are redundant videos.
 
 ## Chrome (<2mins)
 Download the above or use this direct download link for [chrome.zip](https://raw.githubusercontent.com/mateenshaikh/ICScreator-browser-plugin/main/chrome.zip) file. 
@@ -18,7 +18,7 @@ Install the chrome plugin using the folder above. You can download the folder as
   5. There are no files to select, just click "Select Folder" without selecting a file once you're in the folder.
   6. Leave the browser open while you use the plugin. 
 
- [https://media.tru.ca/media/install%20chrome%20temporarily/0_n5dac6o0](https://media.tru.ca/media/install%20chrome%20temporarily/0_n5dac6o0)
+Redundant video instructions: [https://media.tru.ca/media/install%20chrome%20temporarily/0_n5dac6o0](https://media.tru.ca/media/install%20chrome%20temporarily/0_n5dac6o0)
 
 ## Firefox
 The extension was tentatively approved so you can download the XPI file above. Then drag it into a new firefox window and it'll install. 
@@ -32,7 +32,7 @@ The extension was tentatively approved so you can download the XPI file above. T
   5. Enter the first/last day of classes according to https://www.tru.ca/current/enrolment-services/dates-deadlines.html
   6. Create the ICS file and download it somewhere for the next step.
 
-Video: [https://media.tru.ca/media/use+the+extension+to+download+the+ics+file/0_1y93jmji](https://media.tru.ca/media/use+the+extension+to+download+the+ics+file/0_1y93jmji)
+Redundant video instructions: [https://media.tru.ca/media/use+the+extension+to+download+the+ics+file/0_1y93jmji](https://media.tru.ca/media/use+the+extension+to+download+the+ics+file/0_1y93jmji)
  
 ## Load the calendar events (<2mins)
   7. In Outlook, go to your calendar
@@ -43,7 +43,7 @@ Video: [https://media.tru.ca/media/use+the+extension+to+download+the+ics+file/0_
       - This should be "Calendar" because that's what outlook looks at to schedule meetings and kind of the whole point of this
   12. Click Import. Once loaded, you can delete the ICS file.
 
-Video: [https://media.tru.ca/media/import+into+outlook/0_nnx7m3aw](https://media.tru.ca/media/import+into+outlook/0_nnx7m3aw)
+Redundant video instructions: [https://media.tru.ca/media/import+into+outlook/0_nnx7m3aw](https://media.tru.ca/media/import+into+outlook/0_nnx7m3aw)
 
 # Other notes
  - Manually remove holidays. To delete a single instance in outlook, click the event, then click delete, then click "This Event". If you use the keyboard delete button, it may delete the whole series, or all the events after the particular instance one you selected.
