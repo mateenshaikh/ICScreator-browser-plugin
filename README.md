@@ -3,7 +3,7 @@
 Note that this is under a strong copyleft license and should only be used in educational settings. I haven't modified the default license yet but that's the gist of it.
 
 
-The files was coded using refined prompts with Copilot GPT 4.1 and date issues were fixed with Gemini Flash 2.5 Pro. This means you should expect the code to be of poor quality, uninutitive, and wasteful. But it's functional. Current known bug: it adds "C" to the end of a location but it doesn't really impact functionality/usage otherwise.
+The files was coded using refined prompts with Copilot GPT 4.1 and date issues were fixed with Gemini Flash 2.5 Pro. This means you should expect the code to be of poor quality, uninutitive, and wasteful. But it's functional. Current known bug: it adds "C" to the end of a location. Fixing this is not a primary exercise but it can be fixed in updates. 
 
 The ideal exercise is to take this rough, poorly generated code, and either adapt, improve, or rewrite it to be efficient and intuitive. Alternatively, find a series of prompts that creates better code. Either way, the functionality should match.
 
