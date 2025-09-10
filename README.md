@@ -1,3 +1,12 @@
+# Official method for the "correct" ICS
+
+TRU room bookings lets you download your schedule into an ICS. 
+  1. Go to [Room bookings](https://rbookportal02pd.tru.ca/portal/p/)
+  2. On the left click my calendar
+  3. On the right, click the three dots ⋮
+  4. Select Export to iCalandar
+
+
 # ICScreator-browser-plugin
 
 Note that this is under a strong copyleft license and should only be used in educational settings. I haven't modified the default license yet but that's the gist of it.
