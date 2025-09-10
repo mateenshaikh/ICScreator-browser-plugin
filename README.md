@@ -1,4 +1,4 @@
-# Official method for the "correct" ICS
+# Official method provided by TRU
 
 TRU room bookings lets you download your schedule into an ICS. 
   1. Go to [Room bookings](https://rbookportal02pd.tru.ca/portal/p/)
