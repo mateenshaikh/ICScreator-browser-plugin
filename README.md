@@ -1,10 +1,13 @@
-# Official method provided by TRU
+# Pseduo-Official method provided by TRU
 
 TRU room bookings lets you download your schedule into an ICS. 
   1. Go to [Room bookings](https://rbookportal02pd.tru.ca/portal/p/)
   2. On the left click my calendar
   3. On the right, click the three dots ⋮
   4. Select Export to iCalandar
+
+Current problems with this approach: only creates events for one week, title is the time (not the course).
+One solution is to use the ICS and build the recurring weeks manually (another possible exercise). Another is to use another tool that directly creates the ICS, as below.
 
 
 # ICScreator-browser-plugin
