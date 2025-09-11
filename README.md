@@ -1,14 +1,3 @@
-# Pseduo-Official method provided by TRU
-
-TRU room bookings lets you download your schedule into an ICS. 
-  1. Go to [Room bookings](https://rbookportal02pd.tru.ca/portal/p/)
-  2. On the left click my calendar
-  3. On the right, click the three dots ⋮
-  4. Select Export to iCalandar
-
-Current problems with this approach: only creates events for one week, title is the time (not the course).
-One solution is to use the ICS and build the recurring weeks manually (another possible exercise). Another is to use another tool that directly creates the ICS, as below.
-
 
 # ICScreator-browser-plugin
 
@@ -18,6 +7,17 @@ Note that this is under a strong copyleft license and should only be used in edu
 The files was coded using refined prompts with Copilot GPT 4.1 and date issues were fixed with Gemini Flash 2.5 Pro. This means you should expect the code to be of poor quality, uninutitive, and wasteful. But it's functional. Current known bug: it adds "C" to the end of a location. Fixing this is not a primary exercise but it can be fixed in updates. 
 
 The ideal exercise is to take this rough, poorly generated code, and either adapt, improve, or rewrite it to be efficient and intuitive. Alternatively, find a series of prompts that creates better code. Either way, the functionality should match.
+
+## Pseduo-Official method provided by TRU (only one week at a time)
+
+TRU room bookings lets you download a one week  schedule into an ICS. 
+  1. Go to [Room bookings](https://rbookportal02pd.tru.ca/portal/p/)
+  2. On the left click my calendar
+  3. On the right, click the three dots ⋮
+  4. Select Export to iCalandar
+
+Current problems with this approach: only creates events for one week, title is the time (not the course).
+One solution is to use the ICS and build the recurring weeks manually (another possible exercise). Another is to use another tool that directly creates the ICS, as below.
 
 
 
