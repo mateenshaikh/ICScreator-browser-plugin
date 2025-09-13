@@ -8,7 +8,7 @@ The files was coded using refined prompts with Copilot GPT 4.1 and date issues w
 
 The ideal exercise is to take this rough, poorly generated code, and either adapt, improve, or rewrite it to be efficient and intuitive. Alternatively, find a series of prompts that creates better code. Either way, the functionality should match.
 
-## Pseduo-Official method provided by TRU (only one week at a time)
+### Pseduo-Official method provided by TRU (only one week at a time--I wouldn't recommend it)
 
 TRU room bookings lets you download a one week  schedule into an ICS. 
   1. Go to [Room bookings](https://rbookportal02pd.tru.ca/portal/p/)
